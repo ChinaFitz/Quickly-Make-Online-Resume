@@ -74,6 +74,8 @@
         background-color: #fff;
         box-shadow: 0 1px 4px rgba(140, 153, 167, 0.18);
         z-index: 999;
+        position: sticky;
+        top: 0px;
     }
     
     .el-header, .el-footer {

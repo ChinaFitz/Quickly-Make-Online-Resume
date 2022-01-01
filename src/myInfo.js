@@ -2,9 +2,9 @@
 export default {
     global: {
         title: "陈文达的在线简历",  // 浏览器标签页名
+        name: "陈文达(Fitz)",   // 你的名字(昵称)
     },
     header: {
-        name: "陈文达(Fitz)",   // 左侧你的名字(昵称)
         intro_items: [
             {
                 title: "首页",

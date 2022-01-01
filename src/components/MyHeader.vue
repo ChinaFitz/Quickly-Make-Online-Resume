@@ -1,7 +1,7 @@
 <template>
     <div id="container">
         <div>
-            {{ myinfo.name }}
+            {{ myinfo.global.name }}
         </div>
         <ul id="header">
             <li
@@ -49,19 +49,19 @@
 <script>
     export default {
         name: "MyHeader",
-        beforeCreate() {
-            // 将该页专用的信息先进行一次提取
-            this.myinfo = this.myinfo.header
-        },
         mounted() {
             window.location.href = "/#home" // 自动重定向到首页
             addEventListener("hashchange", ()=>{
                 this.hash = window.location.hash
             })
+            // 用于头部和移动端侧边栏的锚点响应式, 即: 浏览到对应的介绍项目时, 对应介绍项就有下划线高亮
+            this.$bus.$on("change_hash", h => {
+                this.hash = h
+            })
         },
         data() {
             return {
-                intro_items: this.myinfo.intro_items,
+                intro_items: this.myinfo.header.intro_items,
                 hash: "#home",
                 show_menu: false,
             }

@@ -21,6 +21,7 @@ new Vue({
     el: '#app',
     beforeCreate() {
         Vue.prototype.myinfo = myinfo
+        Vue.prototype.$bus = this
         document.title = myinfo.global.title
     },
 })
