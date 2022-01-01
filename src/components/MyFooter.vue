@@ -1,5 +1,7 @@
 <template>
-    <div>MyFooter</div>
+    <div>
+        MyFooter
+    </div>
 </template>
 
 <script>
