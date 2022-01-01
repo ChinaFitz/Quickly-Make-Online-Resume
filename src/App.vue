@@ -4,7 +4,7 @@
             <MyHeader />
         </el-header>
         <el-main>
-            <AboutMe />
+            <Intro />
         </el-main>
         <el-footer>
             <MyFooter />
@@ -14,14 +14,14 @@
 
 <script>
     import MyHeader from "@/components/MyHeader";
-    import AboutMe from "@/components/AboutMe";
+    import Intro from "@/components/Intro";
     import MyFooter from "@/components/MyFooter";
 
     export default {
       name: "App",
       components: {
         MyHeader,
-        AboutMe,
+        Intro,
         MyFooter,
       },
     };
@@ -31,6 +31,9 @@
     /*===== 全局字体 =====*/
     html {
         font-family: 'Poppins', Helvetica, Arial, sans-serif;
+
+        // 锚点滚动的过渡效果
+        scroll-behavior: smooth;
 
         // 滚动条样式
         &::-webkit-scrollbar {

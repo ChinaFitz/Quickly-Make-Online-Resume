@@ -6,6 +6,7 @@ import {
     Main,
     Footer,
     Icon,
+    Backtop,
 } from 'element-ui'
 
 Vue.component(Container.name, Container)
@@ -13,3 +14,4 @@ Vue.component(Header.name, Header)
 Vue.component(Main.name, Main)
 Vue.component(Footer.name, Footer)
 Vue.component(Icon.name, Icon)
+Vue.component(Backtop.name, Backtop)
