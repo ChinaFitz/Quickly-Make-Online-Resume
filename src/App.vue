@@ -31,6 +31,26 @@
     /*===== 全局字体 =====*/
     html {
         font-family: 'Poppins', Helvetica, Arial, sans-serif;
+
+        // 滚动条样式
+        &::-webkit-scrollbar {
+            width: 15px;
+            height: 15px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(144, 147, 153, .5);
+            border-radius: 30px;
+            box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+
+            &:hover {
+                background-color: rgba(105, 106, 109, 0.5);
+            }
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
     }
 
     @media screen and (max-width: 750px) {
