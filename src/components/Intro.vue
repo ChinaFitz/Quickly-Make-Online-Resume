@@ -30,9 +30,9 @@
                         </p>
                         <a href="#contact" class="contract_me">联系我吧</a>
                         <div class="blogs">
-                            <a class="blog_item" target="_blank" href="https://www.cnblogs.com/fitzlovecode/">博客园</a>
-                            <a class="blog_item" target="_blank" href="https://gitee.com/chinafitz">gitee</a>
-                            <a class="blog_item" target="_blank" href="https://github.com/ChinaFitz">
+                            <a class="blog_item" target="_blank" :href="blogs.cnblogs">博客园</a>
+                            <a class="blog_item" target="_blank" :href="blogs.gitee">gitee</a>
+                            <a class="blog_item" target="_blank" :href="blogs.github">
                                 github
                                 <i class="bx bxl-github"></i>
                             </a>
@@ -90,6 +90,10 @@
                         }
                     }
                 )
+            },
+            // 博客相关的地址
+            blogs() {
+                return this.myinfo.intro.home.blogs
             },
         },
         methods: {

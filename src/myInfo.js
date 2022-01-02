@@ -34,6 +34,11 @@ export default {
         home: {
             expect_position: "Web前端开发(实习生)",     // 期望岗位
             me: require("@/assets/intro/me.png"),   // 你的照片的路径, 注意储存路径及其写法, @/ 等价于 src/
+            blogs: {
+                cnblogs: "https://www.cnblogs.com/fitzlovecode/",    // 博客园地址
+                gitee: "https://gitee.com/chinafitz",
+                github: "https://github.com/ChinaFitz",
+            }
         },
     },
 }
