@@ -1,7 +1,7 @@
 <template>
     <div id="container">
-        <div>
-            {{ myinfo.global.name }}
+        <div style="text-align: left;">
+            {{ myinfo.global.name }} ( {{  myinfo.global.nickName }} )
         </div>
         <ul id="header">
             <li
