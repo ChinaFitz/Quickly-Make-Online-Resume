@@ -59,7 +59,7 @@
                 <div class="whoami">
                     <img :src="me" alt="个人照片" class="pic">
                     <div class="introduce">
-                        <p>我叫 {{ myinfo.global.name }}</p>
+                        <p>我叫 {{ myinfo.global.name }} ,</p>
                         <div> {{ myinfo.intro.aboutme.introduce }}</div>
                     </div>
                 </div>

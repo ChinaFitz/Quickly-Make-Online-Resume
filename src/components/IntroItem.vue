@@ -111,28 +111,7 @@
 
 
     #aboutme {
-        #flex_center();
-        flex-direction: column;
-        padding: @intro_container_padding;
-
-        .title {
-            display: inline-block;
-            position: relative;
-            font-weight: @global_font_weight;
-            font-size: @introItem_aboutme_title_font_size;
-
-            &::after {
-                position: absolute;
-                content: '';
-                width: 80px;
-                height: 0.18rem;
-                left: 0;
-                right: 0;
-                margin: auto;
-                top: 2.5rem;
-                background-color: @global_emphasis_color;
-            }
-        }
+        #intro_container();
 
         .whoami {
             #flex_center();
