@@ -84,8 +84,8 @@
     }
 
     .el-footer {
-        background-color: #B3C0D1;
-        line-height: 60px;
+        background-color: #0d1730;
+        height: auto!important;
     }
 
 
