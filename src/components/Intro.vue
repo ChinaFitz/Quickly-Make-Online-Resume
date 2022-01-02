@@ -115,7 +115,8 @@
                 
                 addEventListener("scroll", lodash.throttle(
                     ()=>{
-                        let curScrollTop = document.documentElement.scrollTop
+                        // +header的高度 的原因是: 修复锚点因为header的position为sticky而导致的偏移bug
+                        let curScrollTop = document.documentElement.scrollTop + 72
                         let anchors_scrollTop = Object.keys(anchor_target)
                         for (let i = 0; i < anchors_scrollTop.length; i++) {
                             const cur_anchor_scrollTop = Number(anchors_scrollTop[i])
@@ -131,7 +132,7 @@
                     },
                     350
                 ))
-            }
+            },
         },
     };
 </script>

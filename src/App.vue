@@ -56,6 +56,8 @@
         &::-webkit-scrollbar-track {
             background-color: #fff;
         }
+
+        scroll-padding-top: @header_height;
     }
 
     @media screen and (max-width: 750px) {
