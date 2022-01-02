@@ -115,6 +115,7 @@
 
         .whoami {
             #flex_center();
+            flex-wrap: wrap;
             margin-top: 2rem;
 
             .pic {
@@ -125,6 +126,7 @@
             .introduce {
                 align-self: flex-start;
                 padding: 0 @introItem_aboutme_introduce_padding;
+                flex-basis: 22.6rem;
 
 
                 p {
