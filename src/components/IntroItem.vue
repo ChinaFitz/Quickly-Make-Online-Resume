@@ -28,11 +28,11 @@
 
     */
     #home {
-        font-size: @introItem_font_size;
+        font-size: @introItem_home_font_size;
 
         a {
             text-decoration: none;
-            color: @introItem_background_color;
+            color: @introItem_home_background_color;
         }
 
         .home_item {
@@ -40,7 +40,7 @@
             flex-wrap: wrap;
 
             .sayHi {
-                padding: 2rem;
+                padding: @intro_container_padding;
                 flex-grow: 1;
                 display: flex;
                 flex-direction: column;
@@ -65,7 +65,7 @@
                     font-size: 1.3rem;
                     text-align: center;
                     background-color: @global_emphasis_color;
-                    color: @introItem_contact_font_color;
+                    color: @introItem_home_contact_font_color;
                 }
 
                 .blogs {
@@ -94,7 +94,7 @@
                 #flex_center();
 
                 .home__blob {
-                    fill: @introItem_avatar_background_color;
+                    fill: @introItem_home_avatar_background_color;
                     width: 24rem;
                 }
 
@@ -110,6 +110,57 @@
     }
 
 
+    #aboutme {
+        #flex_center();
+        flex-direction: column;
+        padding: @intro_container_padding;
+
+        .title {
+            display: inline-block;
+            position: relative;
+            font-weight: @global_font_weight;
+            font-size: @introItem_aboutme_title_font_size;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 80px;
+                height: 0.18rem;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 2.5rem;
+                background-color: @global_emphasis_color;
+            }
+        }
+
+        .whoami {
+            #flex_center();
+            margin-top: 2rem;
+
+            .pic {
+                width: 300px;
+                border-radius: 0.8rem;
+            }
+
+            .introduce {
+                align-self: flex-start;
+                padding: 0 @introItem_aboutme_introduce_padding;
+
+
+                p {
+                    margin-bottom: 10px;
+                    font-size: @introItem_aboutme_introduce_title_font_size;
+                }
+
+                div {
+                    font-weight: 500;
+                    line-height: 1.5;
+                    font-size: @introItem_aboutme_introduce_content_font_size;
+                }
+            }
+        }
+    }
 
     
 </style>
