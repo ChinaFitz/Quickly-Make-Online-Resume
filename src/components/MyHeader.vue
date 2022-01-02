@@ -70,15 +70,13 @@
 </script>
 
 <style scoped lang="less">
-    @color: #0D1730;
-    @theme-color: #269cf7;
-
+    @import "../config.less";
 
     #container {
         width: 90%;
         height: 100%;
         margin: 0 auto;
-        font-weight: 600;
+        font-weight: @global_font_weight;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -100,10 +98,10 @@
                 height: 0.2rem;
                 left: 0;
                 top: 3rem;
-                background-color: @theme-color;
+                background-color: @global_emphasis_color;
             }
 
-            color: #0D1730;
+            color: @header_font_color;
             margin: 0;
             padding: 0;
             display: flex;
@@ -128,7 +126,7 @@
 
             a {
                 text-decoration: none;
-                color: @color;
+                color: @header_font_color;
             }
         }
 
@@ -136,8 +134,6 @@
         @media screen and (max-width: 750px) {
             #container {
                 justify-content: space-between;
-
-               
             }
 
             div {
@@ -173,7 +169,7 @@
             --animate-duration: .3s;    // 调整与动画样式库
             width: 70%;
             height: 100vh;
-            background-color: #16213f;
+            background-color: @mobile_menu_color;
             position: absolute;
             right: 0;
             top: 4rem;
@@ -185,11 +181,11 @@
 
                 a {
                     position: relative;
-                    color: @color;
+                    color: @header_font_color;
                     text-decoration: none;
-                    color: #fff;
+                    color: @mobile_menu_font_color;
                     text-align: left;
-                    font-size: 1rem;
+                    font-size: @mobile_menu_font_size;
                     display: inline-block;
                     height: 100%;
                 }

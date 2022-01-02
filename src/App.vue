@@ -28,6 +28,8 @@
 </script>
 
 <style lang="less">
+    @import "./config.less";
+
     /*===== 全局字体 =====*/
     html {
         font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -58,20 +60,20 @@
 
     @media screen and (max-width: 750px) {
         html {
-            font-size: 14px;
+            font-size: @mobile_rem;
         }
         
     }
 
     @media screen and (min-width: 750px) {
         html {
-            font-size: 18px;
+            font-size: @default_rem;
         }
     }
 
     .el-header {
-        height: 4rem!important;
-        background-color: #fff;
+        height: @header_height !important;
+        background-color: @global_background_color;
         box-shadow: 0 1px 4px rgba(140, 153, 167, 0.18);
         z-index: 999;
         position: sticky;
@@ -79,18 +81,16 @@
     }
     
     .el-header, .el-footer {
-      color: #333;
       text-align: center;
     }
 
     .el-footer {
-        background-color: #0d1730;
+        background-color: @footer_background_color;
         height: auto!important;
     }
 
 
     .el-main {
-      background-color: #fff;
-      color: #333;
+      background-color: @global_background_color;
     }
 </style>

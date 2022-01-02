@@ -29,16 +29,18 @@
 </script>
 
 <style scoped lang="less">
+    @import "../config.less";
+
     #footer_container {
-        color: #fff;
-        font-size: 1rem;
+        color: @footer_font_color;
+        font-size: @footer_font_size;
         font-weight: 500;
 
         p {
             margin: 25px;
 
             a {
-                color: #fff;
+                color: @footer_font_color;
                 text-decoration: none;
             }
         }

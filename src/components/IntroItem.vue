@@ -17,6 +17,8 @@
 </script>
 
 <style lang="less" scoped>
+    @import "../config.less";
+    
     /* 
         每个自己的介绍项的样式在这配置, 格式如下:
             
@@ -26,11 +28,11 @@
 
     */
     #home {
-        font-size: 2rem;
+        font-size: @introItem_font_size;
 
         a {
             text-decoration: none;
-            color: #0d1730;
+            color: @introItem_background_color;
         }
 
         .home_item {
@@ -54,7 +56,7 @@
                 }
 
                 .info_emphasis {
-                    color: #269cf7;
+                    color: @global_emphasis_color;
                 }
 
                 .contract_me {
@@ -62,7 +64,7 @@
                     padding: 0.6rem;
                     font-size: 1.3rem;
                     text-align: center;
-                    background-color: #269cf7;
+                    background-color: @global_emphasis_color;
                 }
 
                 .blogs {
@@ -84,17 +86,14 @@
 
 
             .avatar {
-                @color: hsl(224, 89%, 60%);
 
                 width: 5rem;
                 flex-grow: 2;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 padding: 2rem;
+                #flex_center();
 
                 .home__blob {
-                    fill: @color;
+                    fill: @introItem_avatar_background_color;
                     width: 24rem;
                 }
 

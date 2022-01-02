@@ -137,6 +137,8 @@
 </script>
 
 <style scoped lang="less">
+    @import "../config.less";
+
     #intro_container {
         width: 90%;
         margin: 0 auto;
@@ -144,7 +146,7 @@
         /* 将样式穿透到IntroItem组件(具名插槽)中 */
         ::v-deep .intro_items {
             
-            color: #0d1730;
+            color: @intro_background_color;
             font-weight: bold;
             
             &:nth-child(2) {
