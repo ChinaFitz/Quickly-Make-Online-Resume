@@ -7,7 +7,9 @@
             由Fitz在2022元旦假期期间完成
         </p>
         <div id="copyright">
-            <p>©Fitz.  All rigths reserved</p>
+            <p>
+                <a target="_blank" href="https://images.cnblogs.com/cnblogs_com/fitzlovecode/1938520/o_220102093118_wechat.png">©Fitz.</a> All rigths reserved
+            </p>
             <p>
                 <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021178257号</a>
             </p>
