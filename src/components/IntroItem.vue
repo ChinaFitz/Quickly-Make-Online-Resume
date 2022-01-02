@@ -65,6 +65,7 @@
                     font-size: 1.3rem;
                     text-align: center;
                     background-color: @global_emphasis_color;
+                    color: @introItem_contact_font_color;
                 }
 
                 .blogs {
