@@ -3,6 +3,7 @@
 
         <IntroItem
             class="intro_items"
+            ref="intro_items"
             v-for="(item, index) in intro_items" :key="index"
             :slot_name="item.anchor"
         >
@@ -12,7 +13,7 @@
             </template>
 
 
-            <!-- home介绍项 -->
+            <!-- home(首页)介绍项 -->
             <template #home>
                 <div class="home_item">
                     <div class="sayHi">
@@ -52,7 +53,10 @@
                 </div>
             </template>
 
+            <!-- aboutme(关于我)介绍项 -->
+            <!-- <template #aboutme>
 
+            </template> -->
 
 
         </IntroItem>
@@ -99,11 +103,12 @@
         methods: {
             // 用于头部和移动端侧边栏的锚点响应式, 即: 浏览到对应的介绍项目时, 对应介绍项就有下划线高亮
             intro_item_active () {
-                const divs = document.querySelectorAll(".intro_items")
+                const vcs = this.$refs["intro_items"]
                 const anchor_target = {}    // 记录每个锚点所在的位置, 用于顶部和移动端右侧菜单的响应式
                 const items = this.myinfo.header.intro_items
-                divs.forEach(
-                    (div, index) => {
+                vcs.forEach(
+                    (vc, index) => {
+                        const div = vc.$el
                         anchor_target[`${div.offsetTop}`] = items[index]["anchor"]
                     }
                 )
