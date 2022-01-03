@@ -259,7 +259,7 @@
         /* 将样式穿透到IntroItem组件(具名插槽)中 */
         ::v-deep .intro_items {
             
-            color: @intro_background_color;
+            color: @intro_font_color;
             font-weight: bold;
            
         }

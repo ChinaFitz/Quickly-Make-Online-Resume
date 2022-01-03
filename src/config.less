@@ -1,24 +1,37 @@
 // 整个项目的样式(尤其是颜色)配置
 
+// PC端rem大小(谨慎修改)
 @default_rem: 18px; // 1rem = 18px
+// 整个网页的底色
 @global_background_color: #fff;
+// 默认字体颜色
 @global_font_color: #fff;
-@global_emphasis_color: #269cf7;    // 相当于全局的主题色
-@global_anti_emphasis_color: #0d1730;    // 相当于全局的主题色
+// 网页的主题色
+@global_emphasis_color: #269cf7;
+// 网页的第二主题色
+@global_anti_emphasis_color: #0d1730;
+// 默认字体加粗
 @global_font_weight: 600;
+// 浏览器滚动条的宽度
 @global_scrollbar_width: 16px;
 
 
 
+// 当 <=750px 认为是移动端
 @isMobile: 750px;
+// @media使用的是该变量, +滚动条的宽度是为了修复@media在有右侧滚动条后不准确的问题
 @Mobile_width: @isMobile + @global_scrollbar_width;
+// 移动端rem大小(谨慎修改)
 @mobile_rem: 14px;  // 1rem = 14px
+// 右侧菜单栏背景颜色
 @mobile_menu_color: #16213f;
+// 右侧菜单栏字体颜色
 @mobile_menu_font_color: @global_background_color;
+// 右侧菜单栏字体大小
 @mobile_menu_font_size: 1rem;
 
 
-
+// header的高度, 由于滚动响应有问题所以谨慎修改
 @header_height: 4rem;
 @header_font_color: @footer_background_color;
 
@@ -27,25 +40,27 @@
 @footer_font_color: @global_background_color;
 @footer_font_size: 1rem;
 
-
-@intro_background_color: @global_anti_emphasis_color;
+// 介绍部分的默认字体颜色
+@intro_font_color: @global_anti_emphasis_color;
+// 每个介绍项的容器都有默认padding
 @intro_container_padding: 2rem;
 
 
+// <首页>介绍项
 @introItem_home_background_color: @global_anti_emphasis_color;
 @introItem_home_font_size: 2rem;
 @introItem_home_avatar_background_color: @global_emphasis_color;
 @introItem_home_contact_font_color: @global_font_color;
 
 
-
+// <关于我>介绍项
 @introItem_aboutme_title_font_size: 1.8rem;
 @introItem_aboutme_introduce_padding: 4rem;
 @introItem_aboutme_introduce_title_font_size: 1.5rem;
 @introItem_aboutme_introduce_content_font_size: 1rem;
 
 
-
+// <我会些什么>介绍项
 @introItem_skills_introduce_title_font_size: 1.5rem;
 @introItem_skills_introduce_content_font_size: 0.9rem;
 @introItem_skills_introduce_content_line_height: 1.5;
@@ -54,12 +69,12 @@
 
 
 
-
+// <个人作品>介绍项
 @introItem_works_work_item_width: 19.167rem;
 @introItem_works_work_item_height: 13rem;
 
 
-
+// <联系我>介绍项
 @introItem_contact_copyButton_bgColor: @global_emphasis_color;
 @introItem_contact_copyButton_hover_bgColor: darken(@global_emphasis_color, 6%);
 
@@ -104,10 +119,8 @@
     }
 }
 
-
+// 简单清除块元素默认样式
 #cls_mp() {
     margin: 0;
     padding: 0;
 }
-
-
