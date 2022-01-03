@@ -7,10 +7,10 @@
             v-for="(item, index) in intro_items" :key="index"
             :slot_name="item.anchor"
         >
-
+            
             <!-- home(首页)介绍项 -->
             <template #home>
-                <div class="home_item">
+                <div class="home_item animate__animated animate__bounce animate__fadeInDown">
                     <div class="sayHi">
                         <p>你好呀,</p>
                         <p>
@@ -51,8 +51,8 @@
 
             <!-- aboutme(关于我)介绍项 -->
             <template #aboutme>
-                <p class="title">{{item.title}}</p>
-                <div class="whoami">
+                <p class="title animate__animated animate__bounce animate__fadeInRightBig ">{{item.title}}</p>
+                <div class="whoami animate__animated animate__bounce animate__fadeInLeftBig">
                     <img :src="me" alt="个人照片" class="pic">
                     <div class="introduce">
                         <p>我叫 {{ myinfo.global.name }} ,</p>
@@ -64,7 +64,7 @@
 
             <!-- skill(我会些什么)介绍项 -->
             <template #skills>
-                <p class="title">{{item.title}}</p>
+                <p class="title animate__animated animate__bounce animate__fadeInRightBig ">{{item.title}}</p>
                 <div class="container">
                     <div class="skills_left">
                         <p>我掌握了以下技能:</p>
@@ -101,7 +101,7 @@
 
             
             <template #works>
-                <p class="title">{{item.title}}</p>
+                <p class="title animate__animated animate__bounce animate__fadeInRightBig ">{{item.title}}</p>
                 <div class="works_container">
                     <a
                         class="work_item"
@@ -118,7 +118,7 @@
 
             <!-- contact(联系我)介绍项 -->
             <template #contact>
-                <p class="title">{{item.title}}</p>
+                <p class="title animate__animated animate__bounce animate__fadeInRightBig ">{{item.title}}</p>
 
                 <el-descriptions
                     border
@@ -146,7 +146,7 @@
                     </el-descriptions-item>
                 </el-descriptions>
             </template>
-
+            
         </IntroItem>
 
         <el-backtop :visibility-height="50"></el-backtop>

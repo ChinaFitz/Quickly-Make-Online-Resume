@@ -11,6 +11,8 @@ import "@/assets/font.less"
 import "@/assets/resetMobile.less"
 // 全局的动画样式库
 import 'animate.css'
+// boxicons图标库
+import 'boxicons/css/boxicons.min.css';
 
 
 
