@@ -53,6 +53,7 @@
                 </div>
             </template>
 
+
             <!-- aboutme(关于我)介绍项 -->
             <template #aboutme>
                 <p class="title">{{item.title}}</p>
@@ -66,6 +67,43 @@
             </template>
 
 
+            <!-- skill(我会些什么)介绍项 -->
+            <template #skills>
+                <p class="title">{{item.title}}</p>
+                <div class="container">
+                    <div class="skills_left">
+                        <p>我掌握了以下技能:</p>
+                        <div class="skills_introduce">
+                            这些技能都是我自己在各大视频网站自学的 这些技能都是我自己在各大视频网站自学的
+                            这些技能都是我自己在各大视频网站自学的 这些技能都是我自己在各大视频网站自学的
+                            这些技能都是我自己在各大视频网站自学的 这些技能都是我自己在各大视频网站自学的
+                        </div>
+                        <ul
+                            class="skills_list animate__animated animate__bounce animate__fadeInLeftBig"
+                        >
+                            <Skills
+                                v-for="(skill, index) in main_skills" :key="index"
+                                :skill_name="skill.skill_name"
+                                :progress_num="skill.progress_of_master"
+                                :icon_class_name="skill.icon"
+                            />
+                        </ul>
+                    </div>
+                    <div class="skills_right">
+                        <ul
+                            class="skills_list animate__animated animate__bounce animate__fadeInRightBig"
+                        >
+                            <Skills
+                                v-for="(skill, index) in sub_skills" :key="index"
+                                :skill_name="skill.skill_name"
+                                :progress_num="skill.progress_of_master"
+                                :icon_class_name="skill.icon"
+                            />
+                        </ul>
+                    </div>
+                </div>
+            </template>
+
         </IntroItem>
 
         <el-backtop :visibility-height="50"></el-backtop>
@@ -75,11 +113,13 @@
 <script>
     import lodash from "lodash"
     import IntroItem from "@/components/IntroItem"
+    import Skills from "@/components/Skills"
 
     export default {
         name: "Intro",
         components: {
             IntroItem,
+            Skills,
         },
         mounted() {
             this.intro_item_active()
@@ -106,6 +146,15 @@
             // 博客相关的地址
             blogs() {
                 return this.myinfo.intro.home.blogs
+            },
+            skills_list() {
+                return this.myinfo.intro.skills
+            },
+            main_skills() {
+                return this.skills_list.main_skills
+            },
+            sub_skills() {
+                return this.skills_list.sub_skills
             },
         },
         methods: {
@@ -158,18 +207,12 @@
             color: @intro_background_color;
             font-weight: bold;
             
-            // &:nth-child(2) {
-            //     background-color: rebeccapurple;
+            // &:nth-child(3) {
+            //     background-color: teal;
             //     line-height: 1000px;
             //     font-size: 4rem;
             //     text-align: center;
             // }
-            &:nth-child(3) {
-                background-color: teal;
-                line-height: 1000px;
-                font-size: 4rem;
-                text-align: center;
-            }
             &:nth-child(4) {
                 background-color: yellowgreen;
                 line-height: 1000px;

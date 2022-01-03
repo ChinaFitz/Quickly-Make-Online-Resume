@@ -144,4 +144,49 @@
     }
 
     
+    #skills {
+        #intro_container();
+
+        .container {
+            display: flex;
+
+            ul {
+                #cls_mp();
+
+                li {
+                    list-style: none;
+                }
+            }
+            
+            & > div {
+                flex: 1 1 50%;
+            }
+
+            .skills_left {
+                padding: 2rem;
+
+                & > p {
+                    font-size: @introItem_skills_introduce_title_font_size;
+                    font-weight: @global_font_weight;
+                    #cls_mp();
+                }
+
+                .skills_introduce {
+                    font-size: @introItem_skills_introduce_content_font_size;
+                    font-weight: 500;
+                    line-height: @introItem_skills_introduce_content_line_height;
+                    margin: 16px 0 32px 0;
+                }
+            }
+
+            .skills_right {
+                padding: 2rem;
+
+                .skills_list {
+                    margin-top: 5rem;
+                }
+            }
+
+        }
+    }
 </style>

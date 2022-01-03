@@ -2,7 +2,7 @@
 
 @global_background_color: #fff;
 @default_rem: 18px; // 1rem = 18px
-@global_emphasis_color: #269cf7;
+@global_emphasis_color: #269cf7;    // 相当于全局的主题色
 @global_font_weight: 600;
 
 
@@ -41,6 +41,14 @@
 
 
 
+@introItem_skills_introduce_title_font_size: 1.5rem;
+@introItem_skills_introduce_content_font_size: 0.9rem;
+@introItem_skills_introduce_content_line_height: 1.5;
+@introItem_skills_skill_item_icon_size: @introItem_skills_introduce_title_font_size;
+@introItem_skills_skill_item_hover_animation_duration: 0.2s;
+
+
+
 
 
 
@@ -64,6 +72,7 @@
         position: relative;
         font-weight: @global_font_weight;
         font-size: @introItem_aboutme_title_font_size;
+        color: @global_emphasis_color;
 
         &::after {
             position: absolute;
@@ -78,4 +87,11 @@
         }
     }
 }
+
+
+#cls_mp() {
+    margin: 0;
+    padding: 0;
+}
+
 

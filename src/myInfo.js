@@ -18,7 +18,7 @@ export default {
             },
             {
                 title: "我会些什么?",
-                anchor: "#skill",
+                anchor: "#skills",
             },
             {
                 title: "个人作品",
@@ -49,6 +49,69 @@ export default {
                         待多久斯安德森谁极爱单静安寺级啊世界第四家具大赛嗲第九赛季第三杀季赛季赛
                         sadsajidjsidisajsda
                         `,
+        },
+        skills: {
+            // 最熟悉的技术栈一般3-5个
+            /* 
+                该项目可以直接使用 https://boxicons.com/ 中的icon, 只需要bxs-icon-name即可
+                使用默认icon就用undefined代替
+                不适用icon就用""代替
+            */
+            main_skills: [
+                {
+                    skill_name: "HTML",
+                    progress_of_master: 65, // 技能掌握程度
+                    icon: "bxl-html5",  // icon类名
+                },
+                {
+                    skill_name: "CSS",
+                    progress_of_master: 60,
+                    icon: "bxl-css3",
+                },
+                {
+                    skill_name: "JavaScript",
+                    progress_of_master: 80,
+                    icon: "bxl-javascript",
+                },
+                {
+                    skill_name: "ES6",
+                    progress_of_master: 70,
+                    icon: undefined,    // 使用默认icon
+                },
+                {
+                    skill_name: "Vue",
+                    progress_of_master: 85,
+                    icon: "bxl-vuejs",
+                },
+            ],
+            //其他一些能够说得上东西的技能, 最好列举5个
+            sub_skills: [
+                {
+                    skill_name: "Git",
+                    progress_of_master: 80,
+                    icon: "bxl-git",
+                },
+                {
+                    skill_name: "Less",
+                    progress_of_master: 60,
+                    icon: "bxl-less",
+                },
+                {
+                    skill_name: "Node.js",
+                    progress_of_master: 40,
+                    icon: "bxl-nodejs",
+                },
+                {
+                    skill_name: "Python",
+                    progress_of_master: 40,
+                    icon: "bxl-python",
+                },
+                {
+                    skill_name: "Bootstrap",
+                    progress_of_master: 50,
+                    icon: "bxl-bootstrap",
+                },
+            ],
         },
     },
 }
