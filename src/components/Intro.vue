@@ -104,6 +104,22 @@
                 </div>
             </template>
 
+            
+            <template #works>
+                <p class="title">{{item.title}}</p>
+                <div class="works_container">
+                    <a
+                        class="work_item"
+                        target="_blank"
+                        :title="work.title"
+                        :href="work.url"
+                        v-for="(work, index) in works_list" :key="index"
+                    >
+                        <img :src="work.pic" :alt="work.title">
+                    </a>
+                </div>
+            </template>
+
         </IntroItem>
 
         <el-backtop :visibility-height="50"></el-backtop>
@@ -156,6 +172,9 @@
             sub_skills() {
                 return this.skills_list.sub_skills
             },
+            works_list() {
+                return this.myinfo.intro.works
+            },
         },
         methods: {
             // 用于头部和移动端侧边栏的锚点响应式, 即: 浏览到对应的介绍项目时, 对应介绍项就有下划线高亮
@@ -207,18 +226,12 @@
             color: @intro_background_color;
             font-weight: bold;
             
-            // &:nth-child(3) {
-            //     background-color: teal;
+            // &:nth-child(4) {
+            //     background-color: yellowgreen;
             //     line-height: 1000px;
             //     font-size: 4rem;
             //     text-align: center;
             // }
-            &:nth-child(4) {
-                background-color: yellowgreen;
-                line-height: 1000px;
-                font-size: 4rem;
-                text-align: center;
-            }
             &:nth-child(5) {
                 background-color: hotpink;
                 line-height: 1000px;

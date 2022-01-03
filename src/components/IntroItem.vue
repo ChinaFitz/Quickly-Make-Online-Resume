@@ -189,4 +189,36 @@
 
         }
     }
+
+
+    #works {
+        #intro_container();
+
+        .works_container {
+            #flex_center();
+            flex-wrap: wrap;
+
+
+            .work_item {
+                width: @introItem_works_work_item_width;
+                height: @introItem_works_work_item_height;
+                margin: 1rem;
+                box-shadow: 0px 4px 25px rgba(15, 49, 71, 0.15);
+                border-radius: 0.5rem;
+                overflow: hidden;
+                transition-property: all;
+                transition-timing-function: ease-in-out;
+                transition-duration: .35s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
 </style>

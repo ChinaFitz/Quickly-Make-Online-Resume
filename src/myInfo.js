@@ -22,7 +22,7 @@ export default {
             },
             {
                 title: "个人作品",
-                anchor: "#work",
+                anchor: "#works",
             },
             {
                 title: "联系我",
@@ -113,5 +113,32 @@ export default {
                 },
             ],
         },
+        works: [
+            {
+                title: "w1",        // 作品标题
+                pic: require("@/assets/aboutme/me.jpg"),    // 作品预览图
+                url: "https://www.cnblogs.com/fitzlovecode/",   // 项目运行地址, 如果未部署可以用 javascript:; 代替
+            },
+            {
+                title: "w1",
+                pic: require("@/assets/aboutme/me.jpg"),
+                url: "https://www.cnblogs.com/fitzlovecode/",
+            },
+            {
+                title: "w1",
+                pic: require("@/assets/aboutme/me.jpg"),
+                url: "https://www.cnblogs.com/fitzlovecode/",
+            },
+            {
+                title: "w1",
+                pic: require("@/assets/aboutme/me.jpg"),
+                url: "https://www.cnblogs.com/fitzlovecode/",
+            },
+            {
+                title: "w1",
+                pic: require("@/assets/aboutme/me.jpg"),
+                url: "https://www.cnblogs.com/fitzlovecode/",
+            },
+        ],
     },
 }
