@@ -8,7 +8,7 @@
         </p>
         <div id="copyright">
             <p>
-                <a target="_blank" href="https://images.cnblogs.com/cnblogs_com/fitzlovecode/1938520/o_220102093118_wechat.png">©Fitz.</a> All rigths reserved
+                <a target="_blank" href="https://s4.ax1x.com/2022/01/04/TbjXkt.png">©Fitz.</a> All rigths reserved
             </p>
             <p>
                 <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021178257号</a>
