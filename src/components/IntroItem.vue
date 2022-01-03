@@ -29,6 +29,7 @@
     */
     #home {
         font-size: @introItem_home_font_size;
+        padding: @intro_container_padding;
 
         a {
             text-decoration: none;
@@ -40,7 +41,6 @@
             flex-wrap: wrap;
 
             .sayHi {
-                padding: @intro_container_padding;
                 flex-grow: 1;
                 display: flex;
                 flex-direction: column;
@@ -90,7 +90,6 @@
 
                 width: 5rem;
                 flex-grow: 2;
-                padding: 2rem;
                 #flex_center();
 
                 .home__blob {
