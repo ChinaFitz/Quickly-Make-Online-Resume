@@ -7,11 +7,6 @@
             v-for="(item, index) in intro_items" :key="index"
             :slot_name="item.anchor"
         >
-            <!-- 动态计算插槽名 -->
-            <template #[item.anchor]>
-                {{ item.title }}
-            </template>
-
 
             <!-- home(首页)介绍项 -->
             <template #home>
