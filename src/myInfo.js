@@ -40,6 +40,7 @@ export default {
                 github: "https://github.com/ChinaFitz",
             }
         },
+
         aboutme: {
             me: require("@/assets/aboutme/me.jpg"),   // 上半身照
             introduce: `
@@ -50,10 +51,11 @@ export default {
                         sadsajidjsidisajsda
                         `,
         },
+
         skills: {
             // 最熟悉的技术栈一般3-5个
             /* 
-                该项目可以直接使用 https://boxicons.com/ 中的icon, 只需要bxs-icon-name即可
+                该项目可以直接使用 https://boxicons.com/ 中的icon 和 https://element.eleme.cn/#/zh-CN/component/icon 中的 icon, 只需要bxs-icon-name即可
                 使用默认icon就用undefined代替
                 不适用icon就用""代替
             */
@@ -113,6 +115,7 @@ export default {
                 },
             ],
         },
+
         works: [
             {
                 title: "w1",        // 作品标题
@@ -140,5 +143,35 @@ export default {
                 url: "https://www.cnblogs.com/fitzlovecode/",
             },
         ],
+
+        contact: {
+            full_info: [
+                {
+                    item: "姓名",
+                    content: "陈文达",
+                    icon: "el-icon-user",  // 注意不同网站icon的用法, 具体可以去网站中查看
+                },
+                {
+                    item: "电话号码",
+                    content: "13266032311",
+                    icon: "el-icon-mobile-phone", 
+                },
+                {
+                    item: "微信号",
+                    content: "13266032311",
+                    icon: "bx bxl-twitter", 
+                },
+                {
+                    item: "邮箱",
+                    content: "498289134@qq.com",
+                    icon: "el-icon-location-outline", 
+                },
+                {
+                    item: "居住地",
+                    content: "中山市",
+                    icon: "bx bx-mail-send",  
+                },
+            ]
+        },
     },
 }

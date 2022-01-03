@@ -131,7 +131,7 @@
         }
 
 
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: @Mobile_width) {
             #container {
                 justify-content: space-between;
             }
@@ -153,7 +153,7 @@
             }
         }
 
-        @media screen and (min-width: 750px) {
+        @media screen and (min-width: @Mobile_width) {
             #header {
                 display: flex;
             }
@@ -192,7 +192,7 @@
             }
 
 
-            @media screen and (min-width: 750px) {
+            @media screen and (min-width: @Mobile_width) {
                 display: none;
             }
         }

@@ -120,6 +120,38 @@
                 </div>
             </template>
 
+
+            <!-- contact(联系我)介绍项 -->
+            <template #contact>
+                <p class="title">{{item.title}}</p>
+
+                <el-descriptions
+                    border
+                    :column="1"
+                    size="size"
+                >
+                    <el-descriptions-item
+                        v-for="(info, index) in full_info" :key="index"
+                        ref="infos"
+                    >
+                        <template slot="label">
+                            <i :class="info.icon"></i>
+                            {{ info.item }}
+                        </template>
+                        {{ info.content }}
+                        
+                        <el-button 
+                            type="primary"
+                            size="mini"
+                            @click="copy(info.content, $event)"
+                        >
+                            点击复制信息
+                        </el-button>
+
+                    </el-descriptions-item>
+                </el-descriptions>
+            </template>
+
         </IntroItem>
 
         <el-backtop :visibility-height="50"></el-backtop>
@@ -175,6 +207,9 @@
             works_list() {
                 return this.myinfo.intro.works
             },
+            full_info() {
+                return this.myinfo.intro.contact.full_info
+            },
         },
         methods: {
             // 用于头部和移动端侧边栏的锚点响应式, 即: 浏览到对应的介绍项目时, 对应介绍项就有下划线高亮
@@ -209,6 +244,12 @@
                     350
                 ))
             },
+
+            // 实现一键复制(仅支持PC端)
+            copy (text) {
+                navigator.clipboard.writeText(text)
+            }
+
         },
     };
 </script>
@@ -225,19 +266,7 @@
             
             color: @intro_background_color;
             font-weight: bold;
-            
-            // &:nth-child(4) {
-            //     background-color: yellowgreen;
-            //     line-height: 1000px;
-            //     font-size: 4rem;
-            //     text-align: center;
-            // }
-            &:nth-child(5) {
-                background-color: hotpink;
-                line-height: 1000px;
-                font-size: 4rem;
-                text-align: center;
-            }
+           
         }
     }
 </style>

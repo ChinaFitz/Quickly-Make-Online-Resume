@@ -1,12 +1,17 @@
 // 整个项目的样式(尤其是颜色)配置
 
-@global_background_color: #fff;
 @default_rem: 18px; // 1rem = 18px
+@global_background_color: #fff;
+@global_font_color: #fff;
 @global_emphasis_color: #269cf7;    // 相当于全局的主题色
+@global_anti_emphasis_color: #0d1730;    // 相当于全局的主题色
 @global_font_weight: 600;
+@global_scrollbar_width: 16px;
 
 
 
+@isMobile: 750px;
+@Mobile_width: @isMobile + @global_scrollbar_width;
 @mobile_rem: 14px;  // 1rem = 14px
 @mobile_menu_color: #16213f;
 @mobile_menu_font_color: @global_background_color;
@@ -18,19 +23,19 @@
 @header_font_color: @footer_background_color;
 
 
-@footer_background_color: #0d1730;
+@footer_background_color: @global_anti_emphasis_color;
 @footer_font_color: @global_background_color;
 @footer_font_size: 1rem;
 
 
-@intro_background_color: #0d1730;
+@intro_background_color: @global_anti_emphasis_color;
 @intro_container_padding: 2rem;
 
 
-@introItem_home_background_color: #0d1730;
+@introItem_home_background_color: @global_anti_emphasis_color;
 @introItem_home_font_size: 2rem;
 @introItem_home_avatar_background_color: @global_emphasis_color;
-@introItem_home_contact_font_color: #fff;
+@introItem_home_contact_font_color: @global_font_color;
 
 
 
@@ -52,6 +57,11 @@
 
 @introItem_works_work_item_width: 19.167rem;
 @introItem_works_work_item_height: 13rem;
+
+
+
+@introItem_contact_copyButton_bgColor: @global_emphasis_color;
+@introItem_contact_copyButton_hover_bgColor: darken(@global_emphasis_color, 6%);
 
 
 

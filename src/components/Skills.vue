@@ -73,13 +73,21 @@
         transition-property: all;
         transition-timing-function: linear;
 
-        i {
-            font-size: @introItem_skills_skill_item_icon_size;
-            color: @global_emphasis_color;
+
+        .skill_name {
+
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: @introItem_skills_skill_item_icon_size;
+                color: @global_emphasis_color;
+                margin-right: 5px;
+            }
         }
 
         .progress_num {
-            @media screen and (max-width: 750px) {
+            @media screen and (max-width: @Mobile_width) {
                 display: none;
             }
         }

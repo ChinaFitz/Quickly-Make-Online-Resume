@@ -39,8 +39,8 @@
 
         // 滚动条样式
         &::-webkit-scrollbar {
-            width: 15px;
-            height: 15px;
+            width: @global_scrollbar_width;
+            height: @global_scrollbar_width;
         }
         
         &::-webkit-scrollbar-thumb {
@@ -60,14 +60,14 @@
         scroll-padding-top: @header_height;
     }
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: @Mobile_width) {
         html {
             font-size: @mobile_rem;
         }
         
     }
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: @Mobile_width) {
         html {
             font-size: @default_rem;
         }

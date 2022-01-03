@@ -22,7 +22,7 @@
     /* 
         每个自己的介绍项的样式在这配置, 格式如下:
             
-            #myinfo文件中的anchor名(不用#) {
+            #myinfo文件中的anchor名(anchor名不用加#) {
                 // 你的样式....
             }
 
@@ -101,7 +101,7 @@
                 .home__blob-img {
                     width: 20rem;
 
-                    @media screen and (max-width: 750px) {
+                    @media screen and (max-width: @Mobile_width) {
                         width: 25rem;
                     }
                 }
@@ -217,6 +217,39 @@
 
                 &:hover {
                     transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+
+    #contact {
+        #intro_container();
+
+        .el-descriptions {
+            width: 50%;
+
+
+            ::v-deep td.el-descriptions-item__cell.el-descriptions-item__content {
+
+                @media screen and (min-width: @Mobile_width) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                }
+                
+            }
+
+
+            ::v-deep button.el-button.el-button--primary {
+                background-color: @introItem_contact_copyButton_bgColor;
+                @media screen and (max-width: @Mobile_width) {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: @introItem_contact_copyButton_hover_bgColor;
                 }
             }
         }
