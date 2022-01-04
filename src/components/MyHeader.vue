@@ -165,6 +165,13 @@
             }
         }
 
+        // 修复暗黑模式下位置的元素溢出问题
+        div {
+            &:first-child {
+                overflow: hidden;
+            }
+        }
+
         #header {
             // 选中介绍项后的样式
             #active() {
