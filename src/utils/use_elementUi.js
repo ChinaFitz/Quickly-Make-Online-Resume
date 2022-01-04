@@ -11,6 +11,7 @@ import {
     Descriptions,
     DescriptionsItem,
     Button,
+    Switch,
 } from 'element-ui'
 
 Vue.component(Container.name, Container)
@@ -23,3 +24,4 @@ Vue.component(Progress.name, Progress)
 Vue.component(Descriptions.name, Descriptions)
 Vue.component(DescriptionsItem.name, DescriptionsItem)
 Vue.component(Button.name, Button)
+Vue.component(Switch.name, Switch)

@@ -2,7 +2,7 @@
     <transition
         :appear="true"
     >
-        <li class="skill_item">
+        <li class="skill_item" ref="skill_item">
             <span class="skill_name">
                 <i 
                     class="bx"
@@ -25,16 +25,41 @@
 </template>
 
 <script>
-
     export default {
         name: "Skills", // 指定组件名,
         mounted() {
             this.isMobile = document.documentElement.scrollWidth < 750 ? true : false   // 移动端的掌握程度显示在进度条内, PC端显示在右侧
+            this.$bus.$on("isDarkReaderEnabled", bool => {
+                this.isDarkReaderEnabled = bool
+            })
         },
         data() {
             return {
                 isMobile: false,
+                isDarkReaderEnabled: false,
+                origin_transition: undefined,
             }
+        },
+        watch: {
+            isDarkReaderEnabled: {
+                handler(bool) {
+                    const li = this.$refs.skill_item
+                    if (!this.origin_transition) {
+                        this.origin_transition = getComputedStyle(li).transition
+                    }
+                    
+                    if (bool) {
+                        li.style.transition = "none"
+                        li.style.transform = "none"
+                        li.classList.remove("fix_toggle_day_night_transition")
+
+                    }else {
+                        li.style.transition = this.origin_transition
+                        li.classList.add("fix_toggle_day_night_transition")
+                    }
+                    
+                },
+            },
         },
         props: {
             skill_name: {
@@ -56,7 +81,7 @@
 
     // 让技能掌握程度条也使用上全局主题色
     ::v-deep .el-progress-bar__inner {
-        background-color: @global_emphasis_color;
+        background-color: @global_emphasis_color !important;
     }
 
     .skill_item {
@@ -94,6 +119,13 @@
 
         &:hover {
             transform: translateY(-8px);
+        }
+    }
+
+    // 从暗黑模式切换回白天模式后重新拥有过渡
+    .fix_toggle_day_night_transition {
+        &:hover {
+            transform: translateY(-8px)!important;
         }
     }
 </style>

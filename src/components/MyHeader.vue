@@ -3,6 +3,16 @@
         <div style="text-align: left;">
             {{ myinfo.global.name }} ( {{  myinfo.global.nickName }} )
         </div>
+
+        <div class="toggle_day_night">
+            <el-switch
+                v-model="day_night"
+                inactive-icon-class="bx bxs-sun"
+                active-icon-class="bx bxs-moon"
+            >
+            </el-switch>
+        </div>
+
         <ul id="header">
             <li
                 v-for="(item, index) in intro_items" :key="index"
@@ -47,6 +57,11 @@
 </template>
 
 <script>
+    import {
+        enable as enableDarkMode,
+        disable as disableDarkMode,
+    } from 'darkreader';
+
     export default {
         name: "MyHeader",
         mounted() {
@@ -64,8 +79,29 @@
                 intro_items: this.myinfo.header.intro_items,
                 hash: "#home",
                 show_menu: false,
+                day_night: false,   // false表示白天, true表示晚上
             }
         },
+        watch: {
+            day_night: {
+                immediate: true,
+                handler(bool) {
+                    this.$bus.$emit("isDarkReaderEnabled", bool)
+                    try {
+                        if(bool) {
+                            enableDarkMode({
+                                brightness: 95,
+                                contrast: 86,
+                                sepia: 10,
+                            })
+                        }else {
+                            disableDarkMode()
+                        }
+                        
+                    } catch (e) {}
+                },
+            }
+        }
     };
 </script>
 
@@ -84,6 +120,49 @@
 
         div {
             flex: 1 0 auto;
+            color: @global_anti_emphasis_color;
+        }
+
+        .toggle_day_night {
+
+            ::v-deep .el-switch {
+                
+                @media screen and (max-width: @Mobile_width) {
+                    line-height: 1.8rem;
+                }
+                @media screen and (min-width: @Mobile_width) {
+                    line-height: 1.55rem;
+                }
+
+                // 白天时切换按钮的背景颜色
+                & .el-switch__core {
+                    background-color: @header_toggle_button_day_bgColor !important;
+                }
+
+                // 夜晚时切换按钮的背景颜色
+                &.is-checked {
+
+                    & .el-switch__core {
+                        background-color: @header_toggle_button_night_bgColor !important;
+                    }
+                }
+
+                & .el-switch__label {
+                    
+                    i {
+                        font-size: 1rem;
+                    }
+                }
+
+                // 按钮选中时左侧icon的颜色
+                & .el-switch__label.el-switch__label--left.is-active {
+                    color: @header_toggle_left_icon_active;
+                }
+                // 按钮选中时右侧icon的颜色
+                & .el-switch__label.el-switch__label--right.is-active {
+                    color: @header_toggle_right_icon_active;
+                }
+            }
         }
 
         #header {
