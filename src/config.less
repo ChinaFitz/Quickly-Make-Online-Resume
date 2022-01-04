@@ -8,7 +8,7 @@
 @global_font_color: #fff;
 // 网页的主题色
 @global_emphasis_color: #269cf7;
-// 网页的第二主题色
+// 网页的第二主题色(也可作为字体色)
 @global_anti_emphasis_color: #0d1730;
 // 默认字体加粗
 @global_font_weight: 600;
@@ -106,7 +106,7 @@
 #intro_container() {
     #flex_center();
     flex-direction: column;
-    padding: @intro_container_padding;
+    padding: 2.8*@intro_container_padding @intro_container_padding;
 
     .title {
         display: inline-block;

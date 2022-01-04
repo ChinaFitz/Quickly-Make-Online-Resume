@@ -15,9 +15,10 @@
             <el-progress
                 style="width: 100%; margin-top: 0.56rem;"
                 :stroke-width="22"
-                :text-inside="true"
+                :text-inside="progress_inside"
                 :show-text="isMobile"
                 :percentage="progress_num"
+                :class="{night_progress_font_color: isMobile}"
             >
             </el-progress>
         </li>
@@ -31,6 +32,9 @@
             this.isMobile = document.documentElement.scrollWidth < 750 ? true : false   // 移动端的掌握程度显示在进度条内, PC端显示在右侧
             this.$bus.$on("isDarkReaderEnabled", bool => {
                 this.isDarkReaderEnabled = bool
+            })
+            addEventListener("resize", ()=>{
+                this.isMobile = document.documentElement.scrollWidth < 750 ? true : false   // 移动端的掌握程度显示在进度条内, PC端显示在右侧
             })
         },
         data() {
@@ -59,6 +63,12 @@
                     }
                     
                 },
+            },
+        },
+        computed: {
+            // 移动端显示在外面， PC端显示在里面
+            progress_inside() {
+                return !this.isMobile
             },
         },
         props: {
@@ -120,6 +130,19 @@
         &:hover {
             transform: translateY(-8px);
         }
+
+
+        // 修复skills在暗黑模式下文字显示问题
+        ::v-deep .el-progress {
+            .el-progress-bar__innerText {
+                color: @global_anti_emphasis_color !important;
+            }
+
+            .el-progress__text {
+                font-size: @introItem_skills_introduce_content_font_size * 1.2 !important;
+                margin-left: 12px !important;
+            }
+        }
     }
 
     // 从暗黑模式切换回白天模式后重新拥有过渡
@@ -127,5 +150,10 @@
         &:hover {
             transform: translateY(-8px)!important;
         }
+    }
+
+    // 暗黑模式skills项进度条字体颜色
+    .night_progress_font_color {
+        color: #D6D2CA !important;
     }
 </style>

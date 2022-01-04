@@ -42,13 +42,13 @@ export default {
         },
 
         aboutme: {
-            me: require("@/assets/aboutme/me.jpg"),   // 上半身照
+            me: require("@/assets/aboutme/me.png"),   // 上半身照
             introduce: `
-                        掉就打死哦安静地死哦啊接迪欧撒撒降低，
-                        待多久斯安德森谁极爱单静安寺级啊世界第四家具大赛嗲第九赛季第三杀季赛季赛
-                        待多久斯安德森谁极爱单静安寺级啊世界第四家具大赛嗲第九赛季第三杀季赛季赛
-                        待多久斯安德森谁极爱单静安寺级啊世界第四家具大赛嗲第九赛季第三杀季赛季赛
-                        sadsajidjsidisajsda
+                        是最老的00后, 就读于电子科技大学中山学院, 专业是电子商务(本科), 我的绩点是3.74(前1.12%)。
+                        我喜欢互联网的一切技术, 在机缘巧合下了解到了前端开发并在最后因为其强反馈性而喜欢上了。
+                        平时喜欢逛一下如Gihutb、博客园、掘金等的一些开源技术社区, 除了能丰富自己的知识, 更能了解行业的一些方向
+                        从2019年开始学习到如今, 了解到了很多前端方面的技术, 也做了几个小小的项目。学习的总结与心得也在自己的博客园中记录着。
+                        自认为是一个性格温和、性格外向的人, 凭着这份热爱希望能够成为一名前端工程师吧！
                         `,
         },
 
@@ -72,25 +72,30 @@ export default {
                 },
                 {
                     skill_name: "JavaScript",
-                    progress_of_master: 80,
+                    progress_of_master: 70,
                     icon: "bxl-javascript",
                 },
                 {
                     skill_name: "ES6",
-                    progress_of_master: 70,
+                    progress_of_master: 65,
                     icon: undefined,    // 使用默认icon
                 },
                 {
                     skill_name: "Vue",
-                    progress_of_master: 85,
+                    progress_of_master: 80,
                     icon: "bxl-vuejs",
+                },
+                {
+                    skill_name: "Axios",
+                    progress_of_master: 60,
+                    icon: undefined,
                 },
             ],
             //其他一些能够说得上东西的技能, 最好列举5个
             sub_skills: [
                 {
                     skill_name: "Git",
-                    progress_of_master: 80,
+                    progress_of_master: 73,
                     icon: "bxl-git",
                 },
                 {
@@ -99,48 +104,33 @@ export default {
                     icon: "bxl-less",
                 },
                 {
+                    skill_name: "Bootstrap",
+                    progress_of_master: 50,
+                    icon: "bxl-bootstrap",
+                },
+                {
                     skill_name: "Node.js",
-                    progress_of_master: 40,
+                    progress_of_master: 25,
                     icon: "bxl-nodejs",
                 },
                 {
                     skill_name: "Python",
-                    progress_of_master: 40,
+                    progress_of_master: 20,
                     icon: "bxl-python",
-                },
-                {
-                    skill_name: "Bootstrap",
-                    progress_of_master: 50,
-                    icon: "bxl-bootstrap",
                 },
             ],
         },
 
         works: [
             {
-                title: "w1",        // 作品标题
-                pic: require("@/assets/aboutme/me.jpg"),    // 作品预览图
-                url: "https://www.cnblogs.com/fitzlovecode/",   // 项目运行地址, 如果未部署可以用 javascript:; 代替
+                title: "子网划分辅助工具(纯静态)",        // 作品标题
+                pic: require("@/assets/works/subnet.png"),    // 作品预览图
+                url: "http://subnet.fitzlovexx.top/",   // 项目运行地址, 如果未部署可以用 javascript:; 代替
             },
             {
-                title: "w1",
-                pic: require("@/assets/aboutme/me.jpg"),
-                url: "https://www.cnblogs.com/fitzlovecode/",
-            },
-            {
-                title: "w1",
-                pic: require("@/assets/aboutme/me.jpg"),
-                url: "https://www.cnblogs.com/fitzlovecode/",
-            },
-            {
-                title: "w1",
-                pic: require("@/assets/aboutme/me.jpg"),
-                url: "https://www.cnblogs.com/fitzlovecode/",
-            },
-            {
-                title: "w1",
-                pic: require("@/assets/aboutme/me.jpg"),
-                url: "https://www.cnblogs.com/fitzlovecode/",
+                title: "好物商城(前后端分离)",
+                pic: require("@/assets/works/mall.png"),
+                url: "http://mall.fitzlovexx.top/",
             },
         ],
 
