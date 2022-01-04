@@ -5,8 +5,9 @@ export default {
         name: "陈文达",   // 你的名字
         nickName: "Fitz",   // 英文名或昵称
     },
+
     header: {
-        // 介绍自己
+        // 介绍自己的几个主题
         intro_items: [
             {
                 title: "首页",
@@ -30,6 +31,7 @@ export default {
             },
         ],
     },
+
     intro: {
         home: {
             expect_position: "Web前端开发(实习生)",     // 期望岗位
@@ -174,5 +176,9 @@ export default {
                 },
             ]
         },
+    },
+
+    footer: {
+        record_num: "粤ICP备2021178257号",  // 备案号
     },
 }
