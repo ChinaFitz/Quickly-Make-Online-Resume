@@ -69,9 +69,7 @@
                     <div class="skills_left">
                         <p>我掌握了以下技能:</p>
                         <div class="skills_introduce">
-                            这些技能都是我自己在各大视频网站自学的 这些技能都是我自己在各大视频网站自学的
-                            这些技能都是我自己在各大视频网站自学的 这些技能都是我自己在各大视频网站自学的
-                            这些技能都是我自己在各大视频网站自学的 这些技能都是我自己在各大视频网站自学的
+                            {{ myinfo.intro.skills.skills_introduction }}
                         </div>
                         <ul
                             class="skills_list animate__animated animate__bounce animate__fadeInLeftBig"

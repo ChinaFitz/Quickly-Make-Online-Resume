@@ -110,27 +110,38 @@ export default {
                 },
                 {
                     skill_name: "Node.js",
-                    progress_of_master: 25,
+                    progress_of_master: 15,
                     icon: "bxl-nodejs",
                 },
                 {
                     skill_name: "Python",
-                    progress_of_master: 20,
+                    progress_of_master: 5,
                     icon: "bxl-python",
                 },
             ],
+            // 对自己会的技能做简单的介绍
+            skills_introduction: `
+                学习的方式主要是通过视频入门后, 做一些小Demo或者小项目进行练习与巩固。
+                当需要对技术进行深入理解时则是通过书籍和别人写的技术博客, 然后自己试着在博客园上记录下来。
+                技术栈主要是: 前端基础三件套、组件库、样式库、Vue、预处理器、Git以及一点点的Node.js、Python...
+            `,
         },
 
         works: [
             {
-                title: "子网划分辅助工具(纯静态)",        // 作品标题
-                pic: require("@/assets/works/subnet.png"),    // 作品预览图
-                url: "http://subnet.fitzlovexx.top/",   // 项目运行地址, 如果未部署可以用 javascript:; 代替
-            },
-            {
                 title: "好物商城(前后端分离)",
                 pic: require("@/assets/works/mall.png"),
                 url: "http://mall.fitzlovexx.top/",
+            },
+            {
+                title: "在线简历(响应式布局)",
+                pic: require("@/assets/works/resume.png"),
+                url: "http://fitzlovexx.top/",
+            },
+            {
+                title: "子网划分辅助工具(纯静态)",        // 作品标题
+                pic: require("@/assets/works/subnet.png"),    // 作品预览图
+                url: "http://subnet.fitzlovexx.top/",   // 项目运行地址, 如果未部署可以用 javascript:; 代替
             },
         ],
 
